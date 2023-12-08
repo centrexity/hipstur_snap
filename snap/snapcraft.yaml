@@ -83,4 +83,4 @@ apps:
 #      hipstur: usr/bin/hipstur
 
 
-#icon: snap/gui/icon.png
+icon: hipstur.png
