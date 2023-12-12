@@ -5,7 +5,7 @@ summary: Store all your music, audiobooks, and ebooks completely free!
 description: |
   Want to own your music but tired of transferring files around and running out of storage space. Stream and download the songs and playlists you own easily.
 
-grade: release #devel # must be 'stable' to release into candidate/stable channels
+grade: stable #devel # must be 'stable' to release into candidate/stable channels
 confinement: strict #devmode # use 'strict' once you have the right plugs and slots
 
 parts:
