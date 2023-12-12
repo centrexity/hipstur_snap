@@ -9,11 +9,6 @@ grade: stable #devel # must be 'stable' to release into candidate/stable channel
 confinement: strict #devmode # use 'strict' once you have the right plugs and slots
 
 
-        #armv7l
-        #s390x
-
-
-
 parts:
   hipstur:
    #override-build: bash ./stage.sh
@@ -25,19 +20,30 @@ parts:
       echo "TEST HERE $(arch)"
       case "$(arch)" in
         "x86_64")
-          mv hipstur.x86_64 hipstur
+          cp hipstur.x86_64 hipstur
           ;;
         "ppc64le")
-          mv hipstur.ppc64le hipstur
+          cp hipstur.ppc64le hipstur
           ;;
         "aarch64")
-          echo "HERE ARCH $(arch)"
+          cp hipstur.aarch64 hipstur
+          ;;
+        "armv7l")
+          cp hipstur.armv7l hipstur
+          ;;
+        "s390x")
+          cp hipstur.s390x hipstur
           ;;
         *)
           echo "HERE OTHER ARCH $(arch)"
           exit 1
           ;;
       esac
+      rm hipstur.x86_64
+      rm hipstur.ppc64le
+      rm hipstur.aarch64
+      rm hipstur.armv7l
+      rm hipstur.s390x
       ls
       echo "OVERRIDE DONE"
     stage-packages:
