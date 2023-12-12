@@ -1,0 +1,30 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hipstur
+GenericName=Music Streamer
+Comment=Store all your music, audiobooks, and ebooks completely free!
+Keywords=Audio;Song;MP3;
+Exec=hipstur %U
+Icon=${SNAP}/meta/gui/hipstur.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=AudioVideo;Audio;Player;
+MimeType=application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/vorbis;audio/x-vorbis;audio/x-scpls;audio/x-mp3;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;audio/x-flac;audio/mp4;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-xm;
+Actions=PlayPause;Next;Previous;StopQuit;
+
+[Desktop Action PlayPause]
+Name=Play/Pause
+Exec=hipstur --play-pause
+
+[Desktop Action Next]
+Name=Next
+Exec=hipstur --next
+
+[Desktop Action Previous]
+Name=Previous
+Exec=hipstur --previous
+
+[Desktop Action StopQuit]
+Name=Stop & Quit
+Exec=hipstur --quit
