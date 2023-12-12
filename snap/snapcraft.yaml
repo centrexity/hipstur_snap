@@ -29,6 +29,8 @@ parts:
         ;;
         \?) echo "HERE OTHER ARCH $(arch)"; exit 1;;
       esac
+      ls
+      echo "OVERRIDE DONE"
     stage-packages:
       # Accelerated Renderer support for libSDL2
       - libglu1-mesa
@@ -55,8 +57,8 @@ parts:
 #  build-on: arm64
 #  build-on: armhf
 
-architectures:
-  - amd64
+#architectures:
+#  - amd64
 #  - arm64
 #  - armhf
 
