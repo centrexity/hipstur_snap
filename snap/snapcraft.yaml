@@ -19,15 +19,20 @@ parts:
       echo "TEST HERE $(arch)"
       case "$(arch)" in
         "x86_64")
-        mv hipstur.x86_64 hipstur;
+        mv hipstur.x86_64 hipstur
         ;;
         "ppc64le")
-        echo "HERE ARCH $(arch)";
+        mv hipstur.ppc64le hipstur
         ;;
         "aarch64")
-        echo "HERE ARCH $(arch)";
+        echo "HERE ARCH $(arch)"
         ;;
-        \?) echo "HERE OTHER ARCH $(arch)"; exit 1;;
+        #armv7l
+        #s390x
+        \?)
+        echo "HERE OTHER ARCH $(arch)"
+        exit 1
+        ;;
       esac
       ls
       echo "OVERRIDE DONE"
