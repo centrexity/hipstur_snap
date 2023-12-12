@@ -24,7 +24,9 @@ parts:
       - libpulse0
       - libpulse-dev
       - libgtk2.0-0
-      - qtwayland5
+
+
+#- qtwayland5
 
 
 #parts:
@@ -46,8 +48,8 @@ architectures:
 
 apps:
   hipstur:
-    command: ./launch.sh
-    #command: ./hipstur.x86_64
+    #command: ./launch.sh
+    command: ./hipstur.x86_64
     environment:
       LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
     plugs:
@@ -65,6 +67,7 @@ apps:
       - removable-media
       - wayland
       - gsettings
+      - screen-inhibit-control
 
 
 
