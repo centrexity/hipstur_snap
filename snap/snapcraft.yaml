@@ -20,30 +20,27 @@ parts:
       echo "TEST HERE $(arch)"
       case "$(arch)" in
         "x86_64")
-          cp hipstur.x86_64 hipstur
+          mv bin/hipstur.x86_64 hipstur
           ;;
         "ppc64le")
-          cp hipstur.ppc64le hipstur
+          mv bin/hipstur.ppc64le hipstur
           ;;
         "aarch64")
-          cp hipstur.aarch64 hipstur
+          mv bin/hipstur.aarch64 hipstur
           ;;
         "armv7l")
-          cp hipstur.armv7l hipstur
+          mv bin/hipstur.armv7l hipstur
           ;;
         "s390x")
-          cp hipstur.s390x hipstur
+          mv bin/hipstur.s390x hipstur
           ;;
         *)
           echo "HERE OTHER ARCH $(arch)"
           exit 1
           ;;
       esac
-      rm hipstur.x86_64
-      rm hipstur.ppc64le
-      rm hipstur.aarch64
-      rm hipstur.armv7l
-      rm hipstur.s390x
+      rm -rf bin
+      chmod +x hipstur
       ls
       echo "OVERRIDE DONE"
     stage-packages:
