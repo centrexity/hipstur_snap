@@ -55,9 +55,9 @@ architectures:
 
 apps:
   hipstur:
-    #command: desktop-launch ./launch.sh
+    command: ./launch.sh
     #command: hipstur.x86_64
-    command: hipstur.$SNAP_ARCH_TRIPLET
+    #command: hipstur.$SNAP_ARCH_TRIPLET
     environment:
       LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
     plugs:
