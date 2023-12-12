@@ -11,4 +11,6 @@ if [ -f "${PROGRAM}" ]; then
     ./${PROGRAM}
 else
     echo "Missing: ${PROGRAM}"
+    ls
+    bash
 fi
